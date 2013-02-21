@@ -1,4 +1,8 @@
 package KANA;
+import java.io.IOException;
+import nu.xom.Builder;
+import nu.xom.Document;
+import nu.xom.ParsingException;
 
 /**
  * Hello world!
@@ -6,8 +10,14 @@ package KANA;
  */
 public class App 
 {
-    public static void main( String[] args )
+    public static void main( String[] args )  throws IOException
     {
-        System.out.println( "Hello World!" );
+          Builder bd= new Builder();
+        try {
+            Document doc= bd.build(args[0]);
+            System.out.println(doc.toXML());
+        } catch (ParsingException e) {
+            e.printStackTrace();
+        }
     }
 }
