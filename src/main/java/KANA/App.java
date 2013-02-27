@@ -14,6 +14,7 @@ public class App
     {
           Builder bd= new Builder();
         try {
+            //args[0] doit contenir le chemin du fichier
             Document doc= bd.build(args[0]);
             System.out.println(doc.toXML());
         } catch (ParsingException e) {
