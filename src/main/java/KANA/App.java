@@ -21,4 +21,9 @@ public class App
             e.printStackTrace();
         }
     }
+
+    public boolean xxx()
+    {
+        return true;
+    }
 }
